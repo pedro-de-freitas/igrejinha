@@ -44,7 +44,7 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
   }
 
   const [title, setTitle] = useState("")
-  const [content, setContent] = useState("")
+  const [, setContent] = useState("")
   const [date, setDate] = useState("")
 
   useEffect(() => {
@@ -65,7 +65,6 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
           {initialData ? "Editar Aula" : "Nova Aula"}
         </h2>
 
-        {/* TÍTULO */}
         <input
           placeholder="Título da aula"
           value={title}
@@ -73,7 +72,6 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
           className="w-full p-3 bg-gray-800 rounded"
         />
 
-        {/* TOOLBAR */}
         <div className="flex gap-2 flex-wrap">
 
           <button
@@ -110,7 +108,6 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
           </select>
         </div>
 
-        {/* ✍️ EDITOR */}
         <div>
           <p className="text-sm text-gray-400 mb-1">Conteúdo da aula</p>
 
@@ -124,7 +121,6 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
           />
         </div>
 
-        {/* 📅 DATA */}
         <div className="bg-gray-800 p-3 rounded text-gray-300">
           Próxima aula:{" "}
           <span className="font-semibold">
@@ -132,7 +128,6 @@ export function LessonForm({ onSave, onClose, initialData }: Props) {
           </span>
         </div>
 
-        {/* BOTÕES */}
         <div className="flex gap-3">
           <button
             onClick={onClose}
